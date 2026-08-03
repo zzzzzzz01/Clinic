@@ -1,0 +1,1056 @@
+
+:root {
+    --primary-color: #00BFFF;
+    --primary-dark: #0099CC;
+    --secondary-color: #2ecc71;
+    --secondary-dark: #27ae60;
+    --danger-color: #e74c3c;
+    --danger-dark: #c0392b;
+    --warning-color: #f39c12;
+    --warning-dark: #e67e22;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gray-color: #95a5a6;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 19px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item a {
+    color: #495057;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+.breadcrumb-item a:hover {
+    color: #00BFFF;
+}
+.breadcrumb-item.active {
+    color: #6c757d;
+    font-weight: 600;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.test-header-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* gap: 15px; */
+}
+
+.test-title {
+    font-size: 24px;
+    color: var(--dark-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.test-badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-panel {
+    background-color: rgba(0, 191, 255, 0.2);
+    color: var(--primary-dark);
+}
+
+.badge-single {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: var(--secondary-dark);
+}
+
+.test-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+/* 1) MOBILE VERSIONDA INFO-ITEM LAR YONMA-YON TURISHI */
+@media (max-width: 768px) {
+    .test-info {
+        display: flex;
+        /* flex-wrap: wrap; */
+        gap: 12px;
+    }
+    
+    .info-item {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-info {
+        gap: 10px;
+    }
+    
+    .info-item {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .test-code {
+        display: none;
+    }
+
+    .breadcrumb {
+        font-size: 0.7rem !important;
+        width: 100%;
+    }
+    .breadcrumb-item a {
+        font-size: 12px;
+    }
+}
+.test-code {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    color: var(--gray-color);
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.info-value {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* 2) INFO-ITEM ICHIDAGI MALUMOTLAR FONT-SIZE MOBILE UCHUN KICHRAYSI */
+@media (max-width: 768px) {
+    .info-value {
+        font-size: 12px;
+    }
+    
+    .info-label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-value {
+        font-size: 11px;
+    }
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-in-progress {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+/* TEST NATIJALARI KO'RINISHI */
+.results-container {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.results-header {
+    padding: 18px 20px;
+    background: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.results-header h3 {
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin: 0;
+}
+
+.test-count {
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.results-body {
+    padding: 0;
+}
+
+.single-result-card {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-top: 70px;
+}
+
+.single-result-card:last-child {
+    border-bottom: none;
+}
+
+.result-item {
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-item.high {
+    border-left-color: var(--danger-color);
+}
+
+.result-item.low {
+    border-left-color: var(--warning-color);
+}
+
+.result-item.normal {
+    border-left-color: var(--secondary-color);
+}
+
+.result-label {
+    color: var(--gray-color);
+    font-size: 12px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.result-value {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 9px;
+}
+
+.result-unit {
+    font-weight: normal;
+    color: var(--gray-color);
+    font-size: 12px;
+}
+
+.result-range {
+    font-size: 12px;
+    color: var(--gray-color);
+    margin-top: 4px;
+}
+
+.result-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.status-normal {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: var(--secondary-dark);
+}
+
+.status-low {
+    background-color: rgba(243, 156, 18, 0.2);
+    color: var(--warning-dark);
+}
+
+.status-high {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: var(--danger-dark);
+}
+
+.status-pending {
+    background-color: rgba(108, 117, 125, 0.2);
+    color: #6c757d;
+}
+
+/* PANEL JADVALI */
+.panel-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.panel-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.panel-table th {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.panel-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.panel-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* ACTION BUTTON - Faqat bitta btn-add */
+.btn-add {
+    padding: 6px 12px;
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--secondary-color);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.btn-add:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+    transform: translateY(-1px);
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+/* YAKKA TEST ACTION BUTTON - TUGMA TUZATILDI */
+.single-action-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    padding: 6px 14px;
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--secondary-color);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    z-index: 5;
+}
+
+.single-action-btn:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.actions-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00BFFF 0%, #1E90FF 100%);
+    color: white;
+    border: none;
+    padding: 11px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 191, 255, 0.2);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.2);
+}
+
+.btn-outline {
+    background: white;
+    color: #4a5568;
+    border: 2px solid #cbd5e0;
+    padding: 11px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline:hover {
+    background: #f8f9fa;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray-color);
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.3;
+}
+
+.empty-state h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+.empty-state p {
+    margin-bottom: 15px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+/* MODAL STYLES - TAKOMILLASHTIRILGAN */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Orqa fon scrollini blokirovka qilish */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-container {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #00BFFF 0%, #1E90FF 100%);
+    color: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.modal-title {
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.modal-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+/* MODAL FOOTER - MOBILE VERSIONDA YONMA-YON */
+.modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    background: var(--light-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* Mobile versionda modal footer buttonlar yonma-yon */
+@media (max-width: 768px) {
+    .modal-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .modal-footer .btn {
+        flex: 1;
+        justify-content: center;
+        /* padding: 12px 20px; */
+    }
+}
+
+/* FORM STYLES */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.form-label i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.1);
+}
+
+.test-details {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f3f5 100%);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.test-details-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.test-details-item:last-child {
+    margin-bottom: 0;
+}
+
+.test-details-label {
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+.test-details-value {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* PRINT STYLES - YANGI QO'SHILDI */
+@media print {
+    @page {
+        margin: 8mm;
+        size: A4 portrait;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 11pt;
+        line-height: 1.4;
+    }
+    
+    .container.pt-4,
+    .back-btn,
+    .actions-container,
+    .btn-add,
+    .single-action-btn,
+    .modal-overlay,
+    .modal-container,
+    .header,
+    .navbar,
+    .sidebar,
+    .topbar,
+    .footer
+    {
+        display: none !important;
+    }
+    
+    .test-header-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+        page-break-after: avoid !important;
+    }
+    
+    .test-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .test-title {
+        font-size: 18pt !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .test-badge,
+    .status-badge {
+        display: none !important;
+    }
+    
+    .test-info {
+        display: none !important;
+    }
+    
+    .results-container {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .results-header {
+        display: none !important;
+    }
+    
+    /* PRINT JADVALI */
+    .print-table-container {
+        display: block !important;
+    }
+    
+    .print-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        font-size: 10pt !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .print-table th {
+        background-color: #f0f0f0 !important;
+        color: black !important;
+        font-weight: bold !important;
+        padding: 8px 10px !important;
+        border: 1px solid #ddd !important;
+        text-align: left !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .print-table td {
+        padding: 8px 10px !important;
+        border: 1px solid #ddd !important;
+        vertical-align: middle !important;
+    }
+    
+    .print-status-icon {
+        display: inline-block !important;
+        width: 20px !important;
+        text-align: center !important;
+    }
+    
+    .print-status-icon.high {
+        color: #e74c3c !important;
+    }
+    
+    .print-status-icon.low {
+        color: #f39c12 !important;
+    }
+    
+    .print-status-icon.normal {
+        color: #2ecc71 !important;
+    }
+    
+    .print-footer {
+        display: block !important;
+        text-align: center !important;
+        margin-top: 30px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid #ddd !important;
+        font-size: 9pt !important;
+        color: #666 !important;
+    }
+    
+    .print-footer-item {
+        margin-bottom: 5px !important;
+    }
+    
+    /* YAKKA TEST UCHUN PRINT */
+    .single-result-card {
+        display: none !important;
+    }
+    
+    .panel-table {
+        display: none !important;
+    }
+}
+
+/* Ekranda ko'rinmaydigan print jadvali */
+.print-table-container {
+    display: none;
+}
+
+/* 3) KATTA EKRANDA ISM FAMILIYA: Usmonov Javlon / MOBILE: Usmonov J */
+.name-full {
+    display: inline;
+}
+
+.name-short {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .name-full {
+        display: none;
+    }
+    .name-short {
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 12px;
+    }
+    
+    .test-header-card {
+        padding: 15px;
+    }
+    
+    .test-title {
+        font-size: 18px;
+    }
+    
+    .panel-table {
+        /* display: block; */
+        overflow-x: auto;
+    }
+    
+    .panel-table th,
+    .panel-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    
+    .single-result-card {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        padding-top: 65px;
+    }
+    
+    .single-action-btn {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 12px;
+        padding: 5px 12px;
+        z-index: 5;
+    }
+    
+    .actions-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+    
+    .modal-container {
+        max-width: 95%;
+        margin: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .result-value {
+        margin-top: 4px;
+    }
+
+    .result-status{
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-header-card {
+        padding: 12px;
+    }
+    
+    .test-title {
+        font-size: 12px;
+    }
+    
+    .test-header {
+        /* flex-direction: column;
+        align-items: flex-start; */
+    }
+    
+    .results-header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Mobile da yashiriladigan ustunlar */
+    td:nth-child(4),
+    th:nth-child(4),
+    td:nth-child(3),
+    th:nth-child(3) {
+        display: none !important;
+    }
+    
+    /* Qoladigan ustunlar */
+    td:nth-child(1),
+    th:nth-child(1),
+    td:nth-child(2),
+    th:nth-child(2),
+    td:nth-child(5),
+    th:nth-child(5),
+    td:nth-child(6),
+    th:nth-child(6) {
+        display: table-cell !important;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .modal-close {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .test-details-item {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .modal-footer {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+
+    .modal-footer .btn-primary, .btn-outline {
+        flex: 1;
+        min-width: 0;
+        padding: 8px 10px;
+        font-size: 10px;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .single-result-card {
+        padding: 12px;
+        padding-top: 60px;
+    }
+    
+    .single-action-btn {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 11px;
+        padding: 4px 10px;
+        z-index: 5;
+    }
+} 

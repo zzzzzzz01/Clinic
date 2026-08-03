@@ -1,0 +1,595 @@
+
+/* ===== GENERAL STYLES ===== */
+.appointment-main-wrapper {
+    padding: 60px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.appointment-main-row {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.appointment-content-column {
+    width: 100%;
+}
+
+.appointment-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.appointment-page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.appointment-total-count {
+    background: linear-gradient(135deg, #0dcaf0, #0d9ec0);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== EMPTY STATE ===== */
+.appointment-empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+}
+
+.appointment-empty-icon-wrapper {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: #f0f9ff;
+    margin-bottom: 20px;
+}
+
+.appointment-empty-icon {
+    font-size: 3rem;
+    color: #0dcaf0;
+}
+
+.appointment-empty-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.appointment-empty-text {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.appointment-empty-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #0dcaf0, #0d9ec0);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.appointment-empty-btn:hover {
+    background: #0d9ec0;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(13, 202, 240, 0.3);
+}
+
+/* ===== DESKTOP TABLE ===== */
+.appointment-table-desktop {
+    display: block;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+}
+
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.appointment-table-head {
+    background: linear-gradient(135deg, #0dcaf0, #0d9ec0);
+    border-bottom: none;
+}
+
+.appointment-table-header {
+    padding: 16px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.appointment-table-row-item {
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s;
+}
+
+.appointment-table-row-item:hover {
+    background: #f8f9fa;
+}
+
+.appointment-table-row-item:last-child {
+    border-bottom: none;
+}
+
+.appointment-table-cell {
+    padding: 16px 15px;
+    vertical-align: middle;
+}
+
+.appointment-number {
+    font-weight: 600;
+    color: #0dcaf0;
+}
+
+.appointment-doctor-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.appointment-doctor-image {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0dcaf0;
+}
+
+.appointment-doctor-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.appointment-doctor-specialization {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.appointment-department-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f0f9ff;
+    color: #0dcaf0;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.appointment-date {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* ===== STATUS BADGES ===== */
+.appointment-status-badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.appointment-status-badge i {
+    margin-right: 4px;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.appointment-actions-cell {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.appointment-cancel-btn {
+    padding: 6px 16px;
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.appointment-cancel-btn:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+.appointment-view-btn {
+    padding: 6px 16px;
+    background: linear-gradient(135deg, #0dcaf0, #0d9ec0);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.appointment-view-btn:hover {
+    background: #0d9ec0;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(13, 202, 240, 0.3);
+}
+
+/* ===== MOBILE CARDS ===== */
+.appointment-mobile-cards {
+    display: none;
+}
+
+.appointment-mobile-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s;
+}
+
+.appointment-mobile-card:hover {
+    box-shadow: 0 4px 20px rgba(13, 202, 240, 0.1);
+    border-color: #0dcaf0;
+}
+
+.appointment-mobile-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.appointment-mobile-doctor-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.appointment-mobile-doctor-image {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0dcaf0;
+    flex-shrink: 0;
+}
+
+.appointment-mobile-doctor-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.appointment-mobile-doctor-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.appointment-mobile-doctor-name:hover {
+    color: #0dcaf0;
+}
+
+.appointment-mobile-specialization {
+    font-size: 13px;
+    color: #6c757d;
+    margin-top: 2px;
+}
+
+.appointment-mobile-department {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 3px;
+}
+
+.appointment-mobile-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.appointment-mobile-status-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.appointment-mobile-status-badge i {
+    margin-right: 4px;
+}
+
+.appointment-mobile-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.appointment-mobile-view-btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0dcaf0, #0d9ec0);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.appointment-mobile-view-btn:hover {
+    background: #0d9ec0;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.appointment-mobile-cancel-btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.appointment-mobile-cancel-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* ===== PAGINATION ===== */
+.appointment-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.appointment-pagination-wrapper .pagination {
+    margin: 0;
+}
+
+.appointment-pagination-wrapper .pagination .page-link {
+    color: #0dcaf0;
+    border-color: #e9ecef;
+}
+
+.appointment-pagination-wrapper .pagination .page-link:hover {
+    background: #0dcaf0;
+    color: #ffffff;
+    border-color: #0dcaf0;
+}
+
+.appointment-pagination-wrapper .pagination .active .page-link {
+    background: #0dcaf0;
+    border-color: #0dcaf0;
+    color: #ffffff;
+}
+
+/* ===== MODAL ===== */
+.appointment-view-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+}
+
+.appointment-view-modal.active {
+    display: flex;
+}
+
+.appointment-modal-dialog {
+    max-width: 600px;
+    width: 95%;
+    margin: 30px auto;
+}
+
+.appointment-modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.appointment-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 2px solid #0dcaf0;
+}
+
+.appointment-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.appointment-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.appointment-modal-close:hover {
+    color: #dc3545;
+}
+
+.appointment-modal-body {
+    padding: 24px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+    .appointment-table-desktop {
+        font-size: 13px;
+    }
+
+    .appointment-table-header,
+    .appointment-table-cell {
+        padding: 12px 10px;
+    }
+
+    .appointment-doctor-name {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .appointment-main-wrapper {
+        padding: 30px 0;
+    }
+
+    .appointment-header-section { 
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .appointment-page-title {
+        font-size: 1.5rem;
+    }
+
+    .appointment-table-desktop {
+        display: none !important;
+    }
+
+    .appointment-mobile-cards {
+        display: block !important;
+    }
+
+    .appointment-empty-state {
+        padding: 50px 15px;
+    }
+
+    .appointment-empty-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .appointment-empty-icon {
+        font-size: 2.5rem;
+    }
+
+    .appointment-total-count {
+        font-size: 13px;
+        padding: 6px 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .appointment-mobile-card {
+        padding: 14px 16px;
+        margin-bottom: 12px;
+    }
+
+    .appointment-mobile-date {
+        font-size: 13px;
+    }
+
+    .appointment-mobile-doctor-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    .appointment-mobile-doctor-name {
+        font-size: 14px;
+    }
+
+    .appointment-mobile-specialization {
+        font-size: 12px;
+    }
+
+    .appointment-mobile-department {
+        font-size: 11px;
+    }
+
+    .appointment-mobile-status-badge {
+        font-size: 11px;
+        padding: 3px 12px;
+    }
+
+    .appointment-mobile-view-btn,
+    .appointment-mobile-cancel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .appointment-modal-header {
+        padding: 15px 18px;
+    }
+
+    .appointment-modal-body {
+        padding: 18px;
+    }
+
+    .appointment-page-title {
+        font-size: 1.3rem;
+    }
+} 

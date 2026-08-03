@@ -1,0 +1,220 @@
+
+.search-wrapper {
+    margin-bottom: 20px;
+}
+
+.search-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #dee2e6;
+}
+
+.search-card h4 {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.main-content {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 13px; 
+    white-space: nowrap;
+}
+
+.table thead th i {
+    margin-right: 6px;
+    color: #00BFFF;
+}
+
+.table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+    color: #4a5568;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: #f7fafc;
+} 
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.badge.bg-success {
+    background: #ebf8ff !important;
+    color: #2b6cb0 !important;
+}
+
+.badge.bg-secondary {
+    background: #edf2f7 !important;
+    color: #4a5568 !important;
+}
+
+.badge.bg-primary {
+    background: #00BFFF !important;
+    color: white !important;
+}
+
+.badge.bg-light {
+    background: #f7fafc !important;
+    color: #2d3748 !important;
+    border: 1px solid #e2e8f0;
+}
+
+.badge.bg-light i {
+    color: #00BFFF;
+}
+
+.badge i {
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #7f8c8d;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #e0e6ed;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* ===== MOBILE QATORGA BO'LISH ===== */
+@media (max-width: 768px) {
+    .table-container {
+        padding: 12px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .search-card h4 {
+        font-size: 18px;
+    }
+
+    .search-card .col-md-6.text-md-end {
+        text-align: left !important;
+        margin-top: 8px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    /* Device ustuni - 2 qator */
+    .device-cell {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+    }
+
+    .device-cell .device-name {
+        font-weight: 500;
+        color: #2d3748;
+    }
+
+    .device-cell .device-platform {
+        font-size: 11px;
+        color: #718096;
+        padding-left: 0;
+    } 
+
+    /* Kirish vaqti ustuni - 2 qator */
+    .time-cell {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+    }
+
+    .time-cell .time-date {
+        font-weight: 500;
+        color: #2d3748;
+    }
+
+    .time-cell .time-time {
+        font-size: 11px;
+        color: #718096;
+        padding-left: 0;
+    } 
+}
+
+@media (max-width: 576px) {
+    .table-container {
+        padding: 8px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 10px 4px;
+        font-size: 11px;
+    }
+
+    .table thead th {
+        font-size: 11px;
+    }
+
+    .empty-state i {
+        font-size: 32px;
+    }
+
+    .empty-state p {
+        font-size: 14px;
+    }
+
+    .device-cell .device-platform {
+        font-size: 10px;
+    }
+
+    .time-cell .time-time {
+        font-size: 10px;
+    }
+
+    th:nth-child(1), td:nth-child(1) {  
+        text-align: start;
+    }
+} 

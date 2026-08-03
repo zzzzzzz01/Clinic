@@ -1,0 +1,460 @@
+:root {
+    --primary: #00BFFF;
+    --primary-light: #e6f7ff;
+    --primary-dark: #0099cc;
+    --secondary: #64748b;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --gray: #94a3b8;
+}
+
+.header h1 {
+    color: var(--dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header p {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Title Styles */
+.page-title {
+    margin-bottom: 10px;
+}
+
+.page-title h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
+}
+
+.form-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(0, 191, 255, 0.1);
+    width: 100%;
+    margin: 0;
+}
+
+.form-grid {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-label i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+} 
+
+/* Styled Select Elements */  
+
+.features-section {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 32px 0;
+    border: 2px solid var(--border);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 14px;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border: 2px solid #e2e8f0;
+}
+
+.feature-item:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.feature-item.selected {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+}
+
+.feature-item input {
+    display: none;
+}
+
+.feature-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.feature-item input:checked + .feature-checkbox {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.feature-item input:checked + .feature-checkbox::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.feature-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.feature-count {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.price-section {
+    background: var(--primary-light);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 32px 0;
+    text-align: center;
+    border: 2px dashed var(--primary);
+}
+
+.price-label {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 180px;
+} 
+
+.success-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 2rem;
+    color: white;
+}
+
+.success-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.success-text {
+    color: var(--secondary);
+    margin-bottom: 32px;
+    font-size: 1.2rem;
+}
+
+/* Katta ekranlar uchun (1400px va undan katta) */
+@media (min-width: 1400px) {
+    .form-card {
+        padding: 30px;
+    }
+    
+    .form-grid {
+        gap: 20px;
+    }
+    
+    .form-label {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+    
+    .form-label i {
+        font-size: 1rem;
+        width: 18px;
+    }
+        
+    
+    .features-section {
+        padding: 20px;
+        margin: 24px 0;
+    }
+    
+    .feature-item {
+        padding: 12px;
+    }
+    
+    .btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+    
+    .form-actions {
+        margin-top: 30px;
+        gap: 14px;
+    }
+}
+
+/* Juda katta ekranlar uchun (1800px va undan katta) */
+@media (min-width: 1800px) {
+    .form-card {
+        padding: 35px;
+    }
+    
+    .form-grid {
+        gap: 22px;
+    }
+    
+    .form-label {
+        font-size: 1rem;
+    }
+        
+    
+    .btn {
+        padding: 15px 30px;
+        min-width: 170px;
+    }
+}
+
+/* Animation */
+.form-group {
+    animation: fadeInUp 0.5s ease forwards; 
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kichik ekran uchun sozlash - 480px va undan kichik */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    
+    .page-title h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .form-card {
+        padding: 10px;
+        border-radius: 12px;
+    }
+    
+    .title h2 {
+        font-size: 1rem !important;
+    }
+    
+    .breadcrumb {
+        font-size: 0.7rem !important;
+        width: 97%;
+        margin-left: 5px;
+    }
+
+    .breadcrumb-item a {
+        color: #495057;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        font-size: 12px;
+    }
+    
+    .breadcrumb-item + .breadcrumb-item {
+        padding-left: 3px !important;
+    }
+    
+    .breadcrumb-item + .breadcrumb-item::before {
+        padding-right: 3px !important;
+    }
+    
+    .form-label {
+        font-size: 0.8rem !important;
+        margin-bottom: 4px;
+        gap: 4px;
+    }
+    
+    .form-label i {
+        font-size: 0.8rem !important;
+        width: 16px;
+    } 
+    
+    /* Form grid ni 2 ustun qilish */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 6px !important;
+        margin-bottom: 8px;
+    }
+        
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    
+    .feature-item {
+        padding: 6px !important;
+        gap: 6px;
+    }
+    
+    .feature-text {
+        font-size: 0.7rem !important;
+    }
+    
+    .feature-checkbox {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .feature-item input:checked + .feature-checkbox::after {
+        font-size: 10px;
+    }
+    
+    .feature-count {
+        font-size: 0.65rem !important;
+        padding: 3px 6px !important;
+    } 
+    
+    /* Tugmalar yonma-yon, bekor chapda, yaratish o'ngda */
+    .form-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4px;
+        margin-top: 12px;
+    }
+    
+    .btn {
+        padding: 6px 8px !important;
+        font-size: 0.7rem !important;
+        min-width: 0 !important;
+        width: 48%;
+        border-radius: 6px;
+    }
+    
+    .btn i {
+        font-size: 0.7rem !important;
+    }
+    
+    /* Bekor qilish tugmasi chapda */ 
+    
+    /* Izoh qismi */
+    .full-width {
+        margin-top: 8px;
+    }
+}
+
+/* Juda kichik ekranlar uchun (360px va undan kichik) */
+@media (max-width: 360px) {
+    .form-label {
+        font-size: 0.7rem !important;
+    }
+        
+    
+    .feature-text {
+        font-size: 0.6rem !important;
+    }
+    
+    .btn {
+        padding: 4px 6px !important;
+        font-size: 0.6rem !important;
+    }
+    
+    .feature-count {
+        font-size: 0.55rem !important;
+        padding: 2px 4px !important;
+    }
+} 

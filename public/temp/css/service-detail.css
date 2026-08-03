@@ -1,0 +1,684 @@
+:root {
+    --primary: #15b9d9 ;
+    --secondary: #6c757d;
+}
+
+.service-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url(../img/Clinic2.jpg);
+    background-size: cover;
+    /* background-position: bottom; */
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.service-section {
+    padding: 80px 0;
+}
+
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+
+.team-item .team-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-item .team-img::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: 0.5s;
+}
+
+.team-item .team-img .team-icon {
+    position: absolute;
+    bottom: -125px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.team-item .team-img:hover .team-icon {
+    margin-bottom: 145px;
+}
+
+.team-item:hover .team-content .btn-outline-primary {
+     color: var(--bs-primary);
+     background: var(--bs-white);
+}
+
+.team-item:hover .team-img::before {
+    background: rgba(21, 185, 217, .3);
+}
+
+.team-item .team-content {
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+.team-item .team-content h5 {
+    color: var(--bs-secondary);
+    transition: 0.5s;
+}
+
+.team-item:hover .team-content h5 {
+    color: var(--bs-dark);
+}
+
+.team-item:hover .team-content {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+    color: #fff !important;
+    background-color: #15b9d9;
+    border-color: #15b9d9; 
+}
+
+.btn-action:hover {
+    box-shadow: inset 300px 0 0 0 var(--bs-light) !important;
+    color: var(--bs-primary) !important;
+    transition: 0.5s;
+} 
+
+
+/* Yangilangan service card - rasim va iconsiz */
+.service-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    /* margin-bottom: 30px; */
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+    background: white;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.service-card .card-body {
+    padding: 30px 25px;
+}
+
+/* Ajratuvchi chiziq */
+.service-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.service-card h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.service-card .service-description {
+    color: #636e72;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-card .service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.service-card .service-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.service-card .btn-sm {
+    padding: 6px 18px;
+    font-size: 0.85rem;
+}
+
+.doctor-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: white;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+} 
+
+.price-table {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.price-table th {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.price-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.price-table tr:hover td {
+    background-color: #f8f9fa;
+}
+
+.appointment-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.stat-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bg-light-custom {
+    background-color: #f8f9fa;
+}
+
+.feature-item {
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.sub-style {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    /* background: white; */
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 0 20px;
+}
+
+.sub-style::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary);
+    z-index: 1;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    color: white;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: white;
+    color:  var(--primary);
+}
+
+.btn-outline-primary:focus {
+    background: white;
+    color:  var(--primary);
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: var(--primary);
+}
+
+.info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    bottom: -30px;
+    width: 2px;
+    background: var(--primary);
+}
+
+.timeline-item:last-child::after {
+    display: none;
+}
+
+.stats-counter {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.disease-list {
+    list-style: none;
+    padding: 0;
+}
+
+.disease-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.disease-list li:last-child {
+    border-bottom: none;
+}
+
+.service-hero h1 { 
+   color: white;
+} 
+
+
+
+ 
+.team-img {
+    height: 380px;
+    overflow: hidden;
+    border-top: 1px solid #15b9d9;
+    border-right: 1px solid #15b9d9;
+    border-bottom: 0;
+    border-left: 1px solid #15b9d9;
+}
+
+.team-img .doctor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .team-img {
+        height: 300px;
+    }
+} 
+
+/* ========== MOBILE VERSION ========== */
+@media (max-width: 991px) {
+    .service-hero {
+        padding: 80px 0;
+    }
+    
+    .service-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Hero */
+    .service-hero {
+        padding: 50px 0;
+    }
+    
+    .service-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-hero .lead {
+        font-size: 0.95rem;
+    }
+    
+    .stat-badge {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+    
+    /* Section */
+    .service-section {
+        padding: 40px 0;
+    }
+    
+    .service-section .display-4 {
+        font-size: 1.6rem;
+    }
+    
+    .service-section .lead {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
+    }
+    
+    /* Service Cards */
+    .service-card .card-body {
+        padding: 20px 15px;
+    }
+    
+    .service-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .service-card .service-description {
+        font-size: 0.85rem;
+    }
+    
+    .service-divider {
+        width: 40px;
+        margin: 10px auto;
+    }
+    
+    .service-card .service-price {
+        font-size: 0.95rem;
+    }
+    
+    .service-card .btn-sm {
+        font-size: 0.75rem;
+        padding: 4px 14px;
+    }
+    
+    .service-card .service-footer {
+        padding-top: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    /* Info Card */
+    .info-card {
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+    
+    .info-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .timeline-item::before {
+        left: -20px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .timeline-item::after {
+        left: -16px;
+    }
+    
+    .timeline-item h5 {
+        font-size: 1rem;
+    }
+    
+    .timeline-item p {
+        font-size: 0.85rem;
+    }
+    
+    /* Disease List */
+    .disease-list li {
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Price Table */
+    .price-table th,
+    .price-table td {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+    
+    .price-table td strong {
+        font-size: 0.85rem;
+    }
+    
+    .price-table td small {
+        font-size: 0.7rem;
+    }
+    
+    .price-table th {
+        font-size: 0.9rem;
+        padding: 12px 10px;
+    }
+    
+    /* Appointment Form */
+    .appointment-form {
+        padding: 20px 15px;
+    }
+    
+    .appointment-form h2 {
+        font-size: 1.3rem;
+    }
+    
+    .appointment-form .form-label {
+        font-size: 0.85rem;
+    }
+    
+    .appointment-form .form-control,
+    .appointment-form .form-select {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    
+    .appointment-form .btn-primary {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-hero h1 {
+        font-size: 1.4rem;
+    }
+    
+    .service-hero .lead {
+        font-size: 0.85rem;
+    }
+    
+    .stat-badge {
+        font-size: 0.6rem;
+        padding: 4px 8px;
+    }
+    
+    .service-section .display-4 {
+        font-size: 1.3rem;
+    }
+    
+    .service-section .lead {
+        font-size: 0.85rem;
+    }
+    
+    .service-card .card-body {
+        padding: 15px 12px;
+    }
+    
+    .service-card h4 {
+        font-size: 1rem;
+    }
+    
+    .service-card .service-description {
+        font-size: 0.8rem;
+    }
+    
+    .service-divider {
+        width: 30px;
+        height: 2px;
+        margin: 8px auto;
+    }
+    
+    .service-card .service-price {
+        font-size: 0.85rem;
+    }
+    
+    .service-card .btn-sm {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+    
+    .price-table th,
+    .price-table td {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .price-table td strong {
+        font-size: 0.75rem;
+    }
+    
+    .price-table td small {
+        font-size: 0.6rem;
+    }
+    
+    .appointment-form {
+        padding: 15px 10px;
+    }
+    
+    .appointment-form h2 {
+        font-size: 1.1rem;
+    }
+    
+    .appointment-form .form-label {
+        font-size: 0.8rem;
+    }
+    
+    .appointment-form .form-control,
+    .appointment-form .form-select {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    
+    .appointment-form .btn-primary {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .appointment-form textarea.form-control {
+        font-size: 0.8rem;
+    }
+} 

@@ -1,0 +1,627 @@
+
+/* ===== GENERAL STYLES ===== */
+.appointment-show-wrapper {
+    padding: 60px 0;
+    background: #f8f9fa;
+    min-height: 60vh;
+}
+
+.appointment-show-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.appointment-show-back {
+    margin-bottom: 30px;
+}
+
+.appointment-show-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.appointment-show-back-link:hover {
+    color: #0dcaf0;
+}
+
+/* ===== GRID LAYOUT ===== */
+.appointment-show-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.appointment-show-left,
+.appointment-show-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ===== CARD STYLES ===== */
+.appointment-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+    box-shadow: 0 4px 25px rgba(13, 202, 240, 0.15);
+    transform: translateY(-2px);
+    border-color: #0dcaf0;
+}
+
+.appointment-card-header {
+    padding: 16px 22px;
+    background: #15b9d9;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+    position: relative;
+}
+
+.appointment-card-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.appointment-card-body {
+    padding: 20px 22px;
+    background: #ffffff;
+}
+
+/* ===== DOCTOR ===== */
+.appointment-show-doctor {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.appointment-show-doctor-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0dcaf0;
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.appointment-show-doctor-image:hover {
+    transform: scale(1.05);
+    border-color: #0d9ec0;
+}
+
+.appointment-show-doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.appointment-show-doctor-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: #0dcaf0;
+}
+
+.appointment-show-doctor-specialization {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.appointment-show-doctor-experience,
+.appointment-show-doctor-department {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.appointment-show-doctor-experience i,
+.appointment-show-doctor-department i {
+    margin-right: 6px;
+    color: #0dcaf0;
+    width: 16px;
+}
+
+/* ===== PATIENT INFO ===== */
+.appointment-patient-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.appointment-patient-row {
+    display: flex;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.appointment-patient-row:last-child {
+    border-bottom: none;
+}
+
+.appointment-patient-label {
+    font-weight: 600;
+    color: #495057;
+    min-width: 140px;
+    font-size: 14px;
+}
+
+.appointment-patient-value {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== INFO ROW ===== */
+.appointment-info-row {
+    display: flex;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.appointment-info-row:last-child {
+    border-bottom: none;
+}
+
+.appointment-info-label {
+    font-weight: 600;
+    color: #495057;
+    min-width: 120px;
+    font-size: 14px;
+}
+
+.appointment-info-value {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== DIAGNOSIS ===== */
+.appointment-diagnosis-item {
+    display: flex;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.appointment-diagnosis-item:last-child {
+    border-bottom: none;
+}
+
+.appointment-diagnosis-label {
+    font-weight: 600;
+    color: #0dcaf0;
+    font-size: 14px; 
+    margin-bottom: 3px;
+    min-width: 140px;
+}
+
+.appointment-diagnosis-value {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== COMPLAINTS ===== */
+.appointment-complaint-item {
+    font-size: 14px;
+    color: #2c3e50;
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.appointment-complaint-item:last-child {
+    border-bottom: none;
+}
+
+/* ===== PRESCRIPTIONS ===== */
+.appointment-prescription-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.appointment-prescription-item:last-child {
+    border-bottom: none;
+}
+
+.appointment-prescription-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.appointment-prescription-name {
+    font-size: 15px;
+    color: #2c3e50;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    flex: 0 0 auto;
+}
+
+.appointment-prescription-dosage {
+    font-size: 13px;
+    color: #6c757d;
+    margin: 0;
+    padding-left: 12px;
+    border-left: 2px solid #0dcaf0;
+    flex: 1 1 auto;
+}
+
+.appointment-prescription-instruction {
+    font-size: 13px;
+    color: #6c757d;
+    margin: 6px 0 0 0;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #0dcaf0;
+}
+
+.appointment-prescription-instruction small {
+    font-size: 13px;
+}
+
+/* ===== TEXT ===== */
+.appointment-text {
+    font-size: 14px;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ===== STATUS BADGE ===== */
+.appointment-status-badge {
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.appointment-status-badge i {
+    margin-right: 6px;
+}
+
+/* ===== ACTIONS ===== */
+.appointment-show-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #0dcaf0;
+    flex-wrap: wrap;
+}
+
+.appointment-show-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: #0dcaf0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+}
+
+.appointment-show-back-btn:hover {
+    background: #0d9ec0;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(13, 202, 240, 0.4);
+}
+
+.appointment-show-cancel-form {
+    margin: 0;
+}
+
+.appointment-show-cancel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.appointment-show-cancel-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .appointment-show-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .appointment-show-left,
+    .appointment-show-right {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-show-wrapper {
+        padding: 30px 0;
+    }
+
+    .appointment-show-doctor {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 15px !important;
+    }
+
+    .appointment-show-doctor-image {
+        width: 90px !important;
+        height: 90px !important;
+        margin-top: 5px !important;
+        margin-right: 10px !important;
+        margin-left: 5px !important;
+        border-width: 4px !important;
+    }
+
+    .appointment-show-doctor-name {
+        font-size: 17px;
+    }
+
+    .appointment-patient-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 6px 0;
+        gap: 10px;
+    }
+
+    .appointment-patient-label {
+        min-width: 120px;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .appointment-patient-value {
+        font-size: 13px;
+        flex: 1;
+    }
+
+    .appointment-info-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 6px 0;
+        gap: 10px;
+    }
+
+    .appointment-info-label {
+        min-width: 100px;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .appointment-info-value {
+        font-size: 13px;
+        flex: 1;
+    }
+
+    .appointment-diagnosis-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 6px 0;
+        gap: 10px;
+    }
+
+    .appointment-diagnosis-label {
+        font-size: 13px;
+        min-width: 120px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .appointment-diagnosis-value {
+        font-size: 13px;
+        flex: 1;
+    }
+
+    .appointment-prescription-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .appointment-prescription-name {
+        font-size: 14px;
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .appointment-prescription-dosage {
+        font-size: 13px;
+        border-left: 2px solid #0dcaf0;
+        padding-left: 10px;
+        flex: 1 1 auto;
+        margin: 0;
+    }
+
+    .appointment-prescription-instruction {
+        margin-top: 6px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .appointment-prescription-instruction small {
+        font-size: 12px;
+    }
+
+    .appointment-show-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .appointment-show-back-btn,
+    .appointment-show-cancel-btn {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 13px;
+        flex: 1;
+        justify-content: center;
+        max-width: 200px;
+    }
+
+    .appointment-card-body {
+        padding: 16px 18px;
+    }
+
+    .appointment-card-header {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .appointment-show-doctor-image {
+        width: 88px !important;
+        height: 88px !important;
+        margin-top: 8px !important;
+        margin-right: 15px !important;
+        margin-left: 10px !important;
+        border-width: 4px !important;
+    }
+
+    .appointment-show-doctor-name {
+        font-size: 16px;
+    }
+
+    .appointment-card-header {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .appointment-card-body {
+        padding: 14px 16px;
+    }
+
+    .appointment-diagnosis-value,
+    .appointment-complaint-item,
+    .appointment-prescription-name,
+    .appointment-text {
+        font-size: 13px;
+    }
+
+    .appointment-prescription-dosage {
+        font-size: 12px;
+    }
+
+    .appointment-patient-label {
+        min-width: 100px;
+        font-size: 12px;
+    }
+
+    .appointment-patient-value {
+        font-size: 12px;
+    }
+
+    .appointment-info-label {
+        min-width: 85px;
+        font-size: 12px;
+    }
+
+    .appointment-info-value {
+        font-size: 12px;
+    }
+
+    .appointment-diagnosis-label {
+        min-width: 100px;
+        font-size: 12px;
+    }
+
+    .appointment-diagnosis-value {
+        font-size: 12px;
+    }
+
+    .appointment-prescription-name {
+        font-size: 13px;
+    }
+
+    .appointment-prescription-dosage {
+        font-size: 12px;
+        padding-left: 8px;
+    }
+
+    .appointment-show-back-btn,
+    .appointment-show-cancel-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-show-doctor-image {
+        width: 88px !important;
+        height: 88px !important;
+        margin-top: 10px !important;
+        margin-right: 18px !important;
+        margin-left: 12px !important;
+        border-width: 5px !important;
+    }
+
+    .appointment-prescription-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .appointment-prescription-name {
+        font-size: 13px;
+    }
+
+    .appointment-prescription-dosage {
+        font-size: 12px;
+        padding-left: 8px;
+    }
+
+    .appointment-prescription-instruction {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+} 

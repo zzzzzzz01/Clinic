@@ -1,0 +1,256 @@
+.inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.header-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.header-title p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.stat-icon.blue { background: #e3f2fd; color: #1976d2; }
+.stat-icon.green { background: #e8f5e9; color: #388e3c; }
+.stat-icon.red { background: #ffebee; color: #d32f2f; }
+.stat-icon.orange { background: #fff3e0; color: #f57c00; }
+
+.stat-info h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat-info p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.filters-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filters-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.filter-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.filter-input, .filter-select {
+    width: 100%;
+    padding: 10px 12px 10px 36px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.inventory-table-container {
+    background: white;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.inventory-table th {
+    padding: 14px 16px;
+    text-align: left;
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.inventory-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.medicine-name-cell .medicine-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.medicine-name-cell strong {
+    font-size: 15px;
+}
+
+.medicine-name-cell small {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.stock-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stock-value {
+    font-weight: 600;
+}
+
+.adjust-stock-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.adjust-stock-btn:hover {
+    background: #f0f0f0;
+    color: #4f46e5;
+}
+
+.expiry-date.expiring {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.expiry-badge {
+    font-size: 11px;
+    color: #dc3545;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.good {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.status-badge.low {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-badge.out {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f5f5f5;
+    color: #666;
+}
+
+.icon-btn.edit:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.icon-btn.history:hover {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.empty-cell {
+    text-align: center;
+    padding: 50px !important;
+    color: #6c757d;
+}
+
+/* Modal large */
+.notification-modal.large {
+    max-width: 700px;
+    width: 90%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

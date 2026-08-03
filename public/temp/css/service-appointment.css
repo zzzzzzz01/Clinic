@@ -1,0 +1,328 @@
+.appointment-page {
+    padding: 60px 0;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.appointment-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.appointment-card .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-control-custom {
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control-custom:focus {
+    border-color: #15b9d9;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 185, 217, 0.1);
+}
+
+.form-label-custom {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 13px; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-label-custom::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 14px;
+    background: #00BFFF;
+    border-radius: 2px;
+}
+
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.slot-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    color: #2d3748;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.slot-btn:hover:not(.booked):not(.passed) {
+    border-color: #15b9d9;
+    background: #15b9d9;
+    color: #f0faff;
+}
+
+.slot-btn.available {
+    border-color: #15b9d9;
+    color: #15b9d9;
+}
+
+.slot-btn.available:hover {
+    background: #15b9d9;
+    color: white;
+}
+
+.slot-btn.booked {
+    background: #f1f3f5;
+    color: #adb5bd;
+    cursor: not-allowed;
+    border-color: #e9ecef;
+}
+
+.slot-btn.selected {
+    background: #15b9d9;
+    color: white;
+    border-color: #15b9d9;
+}
+
+.slot-btn.passed {
+    background: #f8f9fa;
+    color: #adb5bd;
+    cursor: not-allowed;
+    border-color: #e9ecef;
+    opacity: 0.6;
+}
+
+.btn-book {
+    background: #15b9d9;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-book:hover {
+    background: #13a8c4;
+    color: white;
+}
+
+.btn-book:disabled {
+    background: #adb5bd;
+    cursor: not-allowed;
+}
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.doctor-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.doctor-info .doctor-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.doctor-info .doctor-specialty {
+    font-size: 14px;
+    color: #718096;
+}
+
+.no-slots {
+    text-align: center;
+    padding: 40px 20px;
+    color: #718096;
+}
+
+.no-slots i {
+    font-size: 48px;
+    color: #e2e8f0;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.selected-info {
+    background: #f0faff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #15b9d9;
+    margin-bottom: 20px;
+}
+
+.selected-info strong {
+    color: #2d3748;
+}
+
+.selected-info span {
+    color: #15b9d9;
+    font-weight: 600;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state i {
+    font-size: 64px;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.empty-state h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #718096;
+}
+
+/* Breadcrumb */ 
+
+.bg-breadcrumb .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.bg-breadcrumb .breadcrumb-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.bg-breadcrumb .breadcrumb-item a:hover {
+    color: white;
+}
+
+.bg-breadcrumb .breadcrumb-item.active {
+    color: white;
+}
+
+.bg-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #15b9d9;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.back-link:hover {
+    color: #13a8c4;
+}
+
+.back-link i {
+    margin-right: 8px;
+}
+
+/* Status indicator */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #4a5568;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 25px;
+    height: 10px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+.status-dot.available {
+    background: #15b9d9;
+}
+
+.status-dot.booked {
+    background: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+    .appointment-card {
+        padding: 20px;
+    }
+    .slot-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .slot-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    .doctor-info img {
+        width: 50px;
+        height: 50px;
+    }
+    .doctor-info .doctor-name {
+        font-size: 16px;
+    }
+
+    .selected-info {
+        font-size: 12px;
+        padding: 9px 14px;
+        margin-bottom: 0;
+    }
+
+    .btn-book {
+        font-size: 13px;
+        padding: 10px 40px;
+        width: 100%;
+    }
+
+    .btn-book i {
+        font-size: 13px;
+    }
+
+    .status-indicator {
+        font-size: 12px;
+    }
+
+    .status-dot {
+        width: 23px;
+        height: 6px;
+    }
+} 
