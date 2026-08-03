@@ -1,3 +1,10 @@
 *
-!public/
 !.gitignore
+!doctors/
+!doctors/**
+!imageDepartment/
+!imageDepartment/**
+!imagePost/
+!imagePost/**
+!nurses/
+!nurses/**
