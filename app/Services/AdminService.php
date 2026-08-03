@@ -955,7 +955,7 @@ class AdminService
         return [
             // Statistika kartalari
             'laboratoryTotalTests' => $this->laboratoryGetTotalTests(),
-            'laboratoryCompletedTests' => $this->laboratoryGetCompletedTests(),
+            'laboratoryCompletedTests' => $this->laboratoryGetCompletedTests(), 
             'laboratoryPendingTests' => $this->laboratoryGetPendingTests(),
             'laboratoryUrgentTests' => $this->laboratoryGetUrgentTests(),
             'laboratoryTotalPatients' => $this->laboratoryGetTotalPatients(),
@@ -1036,7 +1036,7 @@ class AdminService
             $q->whereDate('ordered_at', $date);
         })
         ->orderBy('created_at', 'asc')
-        ->get();
+        ->paginate(6);
 
         return $items->map(fn($item) => [
             'id' => $item->id,

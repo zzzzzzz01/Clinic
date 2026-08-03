@@ -33,7 +33,21 @@
 | **Notifications** | Sending notifications to users |
 | **Settings** | System settings, user permissions |
 
----
+# Screenshots
+
+![Admin dashboard](screenshots/dashboard.jpg)
+
+![Doctor dashboard](screenshots/doctor.jpg)
+
+![Nurse dashboard](screenshots/nurse.jpg)
+
+![Pharmacist dashboard](screenshots/pharmacist.jpg)
+
+![Laboratory Technician dashboard 1](screenshots/laboratory1.jpg)
+![Laboratory Technician dashboard 2](screenshots/laboratory2.jpg)
+
+![Receptionist dashboard 2](screenshots/receptionist.jpg)
+
 
 ## Technologies
 
