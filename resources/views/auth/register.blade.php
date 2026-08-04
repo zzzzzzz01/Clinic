@@ -79,19 +79,19 @@
                                 <div class="col-lg-12 col-xl-12 col-md-8 mx-auto">
                                     <div class="d-flex gap-2 align-items-center">
                                         <button type="submit" class="btn btn-light text-primary w-100 py-3">@lang('words.register')</button>
-                                        <button type="button" class="btn btn-outline-light py-3 px-4" id="quickLoginBtn" title="@lang('words.quick_login')">
+                                        <!-- <button type="button" class="btn btn-outline-light py-3 px-4" id="quickLoginBtn" title="@lang('words.quick_login')">
                                             <i class="fas fa-bolt"></i>
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
 
                                 <!-- Quick Login Hint - faqat oddiy text -->
-                                <div class="info-text">
+                                <!-- <div class="info-text">
                                     <div class="quick-login-hint">
                                         @lang('words.select_role')
                                     </div>
                                     <i class="fa-solid fa-arrow-turn-up"></i>
-                                </div>
+                                </div> -->
                             </div>
                         </form>
                     </div>

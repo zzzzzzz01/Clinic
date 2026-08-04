@@ -203,7 +203,7 @@
             <i class="fas fa-sign-in-alt me-2"></i>Tizimga kirish
         </a>
         
-        <div class="auth-divider">
+        <!-- <div class="auth-divider">
             <span>yoki</span>
         </div>
         
@@ -213,6 +213,6 @@
         
         <p class="auth-footer-text">
             Ro'yxatdan o'tish 1 daqiqadan kam vaqt oladi.
-        </p>
+        </p> -->
     </div>
 </dialog>
